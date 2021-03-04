@@ -1,0 +1,29 @@
+.form {
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.label {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.input {
+  display: block;
+  margin-top: 10px;
+}
+
+.button {
+  display: block;
+  margin-top: 30px;
+  cursor: pointer;
+  width: 150px;
+  padding: 10px;
+}

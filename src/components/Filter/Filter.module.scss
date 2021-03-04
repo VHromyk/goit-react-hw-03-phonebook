@@ -1,0 +1,29 @@
+.list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+
+  .item {
+    padding: 20px;
+    border: 1px solid grey;
+    color: rgb(56, 37, 37);
+    width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: 400ms;
+      color: white;
+    }
+  }
+}
+
+.button {
+  display: block;
+  border-radius: 50%;
+}
