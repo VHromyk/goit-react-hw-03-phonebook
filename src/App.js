@@ -17,22 +17,6 @@ class App extends Component {
     filter: '',
   };
 
-  componentDidMount() {
-    const contacts = localStorage.getItem('contacts');
-    const parseContacts = JSON.parse(contacts);
-    if (this.state.contacts.length > 0) {
-      this.setState({ contacts: parseContacts });
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const nextContacts = this.state.contacts;
-    const prevContacts = prevState.contacts;
-    if (nextContacts !== prevContacts) {
-      localStorage.setItem('contacts', JSON.stringify(nextContacts));
-    }
-  }
-
   addContact = (name, number) => {
     const contact = {
       id: uuidv4(),
@@ -63,6 +47,7 @@ class App extends Component {
   deleteContact = id => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== id),
+      filter: '',
     }));
   };
 
