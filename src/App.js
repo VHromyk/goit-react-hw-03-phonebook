@@ -17,13 +17,13 @@ class App extends Component {
     filter: '',
   };
 
-  // componentDidMount() {
-  //   const contactList = localStorage.getItem('contacts');
-  //   const parseContacts = JSON.parse(contactList);
-  //   if (this.state.contacts.length > 0) {
-  //     this.setState({ contacts: parseContacts });
-  //   }
-  // }
+  componentDidMount() {
+    const contactList = localStorage.getItem('contacts');
+    const parseContacts = JSON.parse(contactList);
+    if (parseContacts) {
+      this.setState({ contacts: parseContacts });
+    }
+  }
 
   componentDidUpdate(prevProps, prevState) {
     let nextState = this.state.contacts;
